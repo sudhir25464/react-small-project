@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import ActionComponent from './componets/ActionComponent'
+import Calculator from './componets/Calculator'
 
 function App() {
   const [length, setLength] = useState(8)
@@ -49,6 +50,7 @@ function App() {
   return (
     <>
     <ActionComponent/>
+    <Calculator/>
       <h1 className='bg-black text-white px-4 py-2 font-bold '>Password Generator</h1>
 
       <div className='w-full max-w-md mx-auto shadow-md p-4 rounded px-4 my-8 text-orange-500 bg-green-500'>
