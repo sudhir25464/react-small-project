@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Button from './Button'
 
 
@@ -28,7 +28,7 @@ const Calculator = () => {
     console.log(input1, input2);
     
     function alertfs(){
-        if(input2 === null || input1 === null){
+        if(input2 === null || input1 === null ){
             alert('Input all fields');
         }
     }
@@ -63,8 +63,12 @@ const Calculator = () => {
       
     }
     const resetresult =()=>{
-        setResult(null);
+  
+        setResult(null); 
     }
+
+
+
   return (
    <div className='flex flex-col justify-center bg-slate-300 p-10 mb-5'>
 

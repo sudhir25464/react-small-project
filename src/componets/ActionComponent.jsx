@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Button from './Button'
 
 function ActionComponent() {
 
     const [count, setCount] = useState(0);
 
+    useEffect(()=>{
+
+        console.log("Componet is updated");
+    },[count])
    
     const increase =()=> { if(count>=0){
         setCount(count +1)
