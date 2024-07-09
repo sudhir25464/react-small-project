@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import ActionComponent from './componets/ActionComponent'
 import Calculator from './componets/Calculator'
-
+import UseRefHook from './componets/UseRefHook'
 function App() {
   const [length, setLength] = useState(8)
 
@@ -47,10 +47,31 @@ function App() {
   }, [length, numberAllowes, charAllowed, passwordGenerator])
 
 
+  const [state, setState] = useState(false);
+  const handleToggle = () => {
+    setState(!state);
+  }
+  const BtnToggle = ()=>{
+return (
+  <>
+  <div className='bg-slate-500 rounded px-4  py-3' onClick={handleToggle}>Toggle</div>
+  </>
+)
+  }
   return (
     <>
+  
+
+  {
+    state? <ActionComponent/> :""
+ 
+ 
+  }
+
     <ActionComponent/>
+    <BtnToggle/>
     <Calculator/>
+    <UseRefHook/>
       <h1 className='bg-black text-white px-4 py-2 font-bold '>Password Generator</h1>
 
       <div className='w-full max-w-md mx-auto shadow-md p-4 rounded px-4 my-8 text-orange-500 bg-green-500'>

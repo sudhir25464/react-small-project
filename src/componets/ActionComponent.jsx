@@ -7,8 +7,23 @@ function ActionComponent() {
 
     useEffect(()=>{
 
-        console.log("Componet is updated");
+        console.log("value is updated", count);
+
+        return ()=>{
+            console.log("Component is mounted");
+           
+        }
     },[count])
+
+
+    useEffect(()=>{
+
+        console.log("value  is unmounted");
+
+        return ()=>{
+            console.log("Component is unmounted");
+        }
+    },[])
    
     const increase =()=> { if(count>=0){
         setCount(count +1)
